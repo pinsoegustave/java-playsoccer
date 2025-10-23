@@ -5,20 +5,19 @@ Cristiano is new to Pittsburgh, and he wants to play soccer sometime. He walks n
 ### Goal: Help Cristiano score a goal.
 
 ### Rules to play soccer and score a goal.
-You must first speak with the head coach. He is eligible to know if you have an ID (member of the Duquesne community).
-You must wear cleats. 
-- The head coach will help you get them.
-You will need to unlock the locker room with a combination lock: 10-10-25, given by the head coach, and take the cleats.
-After having cleats, you will inflate the ball on the field.
-Kick the ball to score a goal.
+- You must first speak with the head coach. He is eligible to know if you have an ID.
+- You must wear cleats. The head coach will help you get them.
+- You will need to unlock the locker room with a combination lock: 10-10-25, given by the head coach, and take the cleats.
+- After having cleats, you will inflate the ball on the field.
+- Kick the ball and score a goal.
 
 
 ### Pathway to winning:
-Lift the towel: You will first need an ID to play, and the ID is hidden inside the towel. You just lift the towel and take your ID.
-Talk to the coach: You must have an ID to talk to the coach.
-Give code: The coach will give you the code to unlock the locker to take cleats from. 
-Unlock locker: You will have to unlock the locker room to take cleats.
-Inflate the ball: There is a ball on the field, and you have to inflate it before kicking it. You have to kick it after to score a goal (Cristiano scores, the game ends).
+1. Lift the towel: You will first need an ID to play, and the ID is hidden inside the towel. You just lift the towel and take your ID.
+2. Talk to the coach: You must have an ID to talk to the coach.
+3. Give code: The coach will give you the code to unlock the locker to take cleats from. 
+4. Unlock locker: You will have to unlock the locker room to take cleats.
+5. Inflate the ball: There is a ball on the field, and you have to inflate it before kicking it. You have to kick it and then score a goal (Cristiano scores, the game ends).
 
 
 
