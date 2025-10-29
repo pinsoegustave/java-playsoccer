@@ -3,50 +3,40 @@ public class Player {
     private boolean hasID;
     private boolean hasCleats;
     private boolean hasTalkedToCoach ;
-    private boolean isLocked;
+    private boolean hasCode;
 
     public Player () {
         hasID = false;
         hasCleats = false;
         hasTalkedToCoach = false;
-        isLocked = false;
+        hasCode = false;
     }
 
-    public String look() {
-        return "In front of you there is a field, the coach, a bench with towel, and a locker room";
+    public void look() {
+        System.out.println("You are standing on Rooney Field. You see: ");
+        System.out.println("- A bench with a towel");
+        System.out.println("- A coach standing nearby");
+        System.out.println("- A locker room");
+        System.out.println("- A soccer ball on the field");
     }
 
-    public String liftTowel() {
-        return "The towel has been lifted. You can pick your ID!";
-    }
-
-    public void takeID () {
-        if (hasID) {
-            System.out.println("You already have ID. Go talk to the coach");
+//    this will help the player talk to coach
+    public void talkCoach() {
+        if (hasID && !hasTalkedToCoach) {
+            hasTalkedToCoach = true;
+            hasCode = true;
+            System.out.println("Coach: I see you have your ID. Welcome to the team!");
+            System.out.println("Coach: You have to get cleats, wait for me to give you the code.");
+            System.out.println("Coach: Good luck out there!");
+        } else if (!hasID) {
+            System.out.println("Coach: Sorry, you have to get an ID to play here.");
+        }
+        else {
+            System.out.println("Coach: Go get your cleats, the combination code is 10-10-25");
         }
     }
 
-    public boolean talkToCoach() {
-        if (!hasID) {
-            System.out.println("Get the code to unlock the locker");
-        }
 
-        return false;
-    }
 
-    public void openLocker() {
-        if (isLocked) {
-            System.out.println("The locker is closed, provide the code to unlock");
-        }
 
-    }
-
-    public void takeCleats() {
-        hasCleats = true;
-        System.out.println("You got cleats, head back to the coach");
-    }
-
-    public String toString() {
-        return "";
-    }
 }
