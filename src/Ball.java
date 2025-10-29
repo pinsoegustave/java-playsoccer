@@ -9,10 +9,8 @@ public class Ball {
     }
 
     public boolean inflate() {
-        if (isInflate) {
-            isInflate = true;
-            System.out.println("The ball has air now");
-        }
+        isInflate = true;
+        System.out.println("The ball has air now");
 
         return false;
     }
