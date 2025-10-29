@@ -1,22 +1,60 @@
 public class Ball {
 //    Instance variables
-    private boolean isInflate;
+    private boolean isInflated;
     private boolean isKicked;
 
     public Ball () {
-        isInflate = false;
+        isInflated = false;
         isKicked = false;
     }
 
-    public boolean inflate() {
-        isInflate = true;
-        System.out.println("The ball has air now");
-
-        return false;
+//    method that shows the player around the field after coming from the locker room
+    public void look() {
+        System.out.println("You see a soccer ball on the field.");
     }
 
-    public boolean kick() {
-        System.out.println("You kicked the ball, you won!!!");
-        return isKicked = true;
+//    method provides details on how to use the ball
+    public void examine() {
+        if (!isInflated) {
+            System.out.println("The ball is deflated, you need to inflate before kicking it");
+        } else if (!isKicked) {
+            System.out.println("A soccer ball is ready to be kicked now!");
+        }
+        else {
+            System.out.println("You kicked the ball to the net! GOAL!");
+        }
     }
+
+//    method to help the player inflate the ball,
+    public void inflate() {
+        if (!isInflated) {
+            isInflated = true;
+            System.out.println("You inflated the ball. Now you can kick it.");
+        }
+        else {
+            System.out.println("The ball is already inflated.");
+        }
+    }
+
+//    method to help the player kick the ball, score and win the game!!
+    public void kick() {
+        if (isInflated && !isKicked) {
+            isKicked = true;
+            System.out.println("You kicked the ball, you won!!!");
+        } else if (!isInflated) {
+            System.out.println("The ball is deflated. You need to inflate it first.");
+        } else {
+            System.out.println("You've already scored the goal");
+        }
+    }
+
+//    Getters
+    public boolean isInflated() {
+        return isInflated;
+    }
+
+    public boolean isKicked() {
+        return isKicked;
+    }
+
 }
