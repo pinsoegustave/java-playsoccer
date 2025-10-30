@@ -10,7 +10,7 @@ public class Ball {
 
 //    method that shows the player around the field after coming from the locker room
     public void look() {
-        System.out.println("You see a soccer ball on the field.");
+        System.out.println("- A soccer ball on the field.");
     }
 
 //    method provides details on how to use the ball
@@ -26,8 +26,11 @@ public class Ball {
     }
 
 //    method to help the player inflate the ball,
-    public void inflate() {
-        if (!isInflated) {
+    public void inflate(Player player) {
+        if (!player.hasCleats()) {
+            System.out.println("You can't inflate the ball without cleats. Go find them");
+        }
+        else if (!isInflated) {
             isInflated = true;
             System.out.println("You inflated the ball. Now you can kick it.");
         }

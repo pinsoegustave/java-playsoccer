@@ -11,7 +11,7 @@ public class Bench {
 
 //    method that shows the bench
     public void look() {
-        System.out.println("You see a bench with a towel on it.");
+        System.out.println("- A bench with a towel on it.");
     }
 
 //    method will provide details about the bench

@@ -12,7 +12,7 @@ public class Locker {
 
 //    this will show the player inside the locker room
     public void look() {
-        System.out.println("You see a locker with a combinational lockscreen.");
+        System.out.println("- A locker with a combinational lockscreen.");
     }
 
 //    this will provide details about the locker

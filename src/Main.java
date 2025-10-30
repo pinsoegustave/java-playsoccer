@@ -62,7 +62,7 @@ public class Main {
                     player.setHasCleats(true);
                 }
             } else if (command.equals("inflate ball")) {
-                ball.inflate();
+                ball.inflate(player);
             } else if (command.equals("kick ball")) {
                 ball.kick();
                 if (ball.isKicked()) {

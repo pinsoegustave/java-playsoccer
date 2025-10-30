@@ -14,10 +14,7 @@ public class Player {
 
     public void look() {
         System.out.println("You are standing on Rooney Field. You see: ");
-        System.out.println("- A bench with a towel");
-        System.out.println("- A coach standing nearby");
-        System.out.println("- A locker room");
-        System.out.println("- A soccer ball on the field");
+        System.out.println("- A coach standing alongside the field");
     }
 
 //    this will help the player talk to coach
