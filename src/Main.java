@@ -1,10 +1,89 @@
+import java.util.Scanner;
 
- public class Main {
+public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello and welcome!");
+        Scanner input = new Scanner(System.in);
+        String command;
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
+//        Initialize game objects
+        Player player = new Player();
+        Bench bench = new Bench();
+        Locker locker = new Locker();
+        Ball ball = new Ball();
+
+//        Print the welcome message
+        System.out.println("=== Welcome to Cristiano's Soccer Adventure ===");
+        System.out.println("Cristiano is new to Pittsburgh and wants to play soccer at Rooney Field.");
+        System.out.println("Help him follow the rules to join the game and score a goal!");
+//        System.out.println("\nType 'help' for available commands.");
+        System.out.println("==============================================");
+
+        boolean gameRunning = true;
+        boolean winGame = false;
+
+//        Main game loop
+        while (gameRunning && !winGame) {
+//            Prompt the user to enter command
+            System.out.println("\nPlease enter command ");
+            command = input.nextLine();
+
+            if (command.equals("quit")) {
+                gameRunning = false;
+                System.out.println("*****");
+            } else if (command.equals("look")) {
+                player.look();
+                bench.look();
+                locker.look();
+                ball.look();
+            } else if (command.equals("examine bench")) {
+                bench.examine();
+            } else if (command.equals("examine locker")) {
+                locker.examine();
+            } else if (command.equals("examine ball")) {
+                ball.examine();
+            } else if (command.equals("examine coach")) {
+                System.out.println("The coach is wearing a red t-shirt with a whistle in the neck.");
+            } else if (command.equals("lift towel")) {
+                bench.liftTowel();
+            } else if (command.equals("take id")) {
+                bench.takeID();
+                if (bench.isIDTaken()) {
+                    player.setHasID(true);
+                }
+            } else if (command.equals("talk to coach")) {
+                player.talkCoach();
+            } else if (command.equals("unlocker locker")) {
+                System.out.println("***************************");
+            } else if (command.equals("open locker")) {
+                locker.openLocker();
+            } else if (command.equals("take cleats")) {
+                locker.takeCleats();
+                if (!locker.hasCleats()) {
+                    player.setHasCleats(true);
+                }
+            } else if (command.equals("inflate ball")) {
+                ball.inflate();
+            } else if (command.equals("kick balll")) {
+                ball.kick();
+                if (ball.isKicked()) {
+                    winGame = true;
+                }
+            }
+            else {
+                System.out.println("Invalid command. Try again!!");
+            }
+            // end of main if-clause
         }
+
+//        Ending message
+        if (winGame) {
+            System.out.println("========================================");
+            System.out.println("CONGRATULATIONS! You helped Cristiano score a goal!");
+            System.out.println("Thanks for playing!!");
+            System.out.println("========================================");
+        }
+
+        input.close();
+
     }
 }
