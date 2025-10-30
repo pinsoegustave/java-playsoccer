@@ -7,7 +7,7 @@ public class Locker {
 
     public Locker() {
         open = false;
-        hasCleats = false;
+        hasCleats = true;
         isLocked = true;
         lock = new CombinationLock("10-10-25", "(format: ##-##-##)");
     }
@@ -45,7 +45,7 @@ public class Locker {
 
         if (unlocked) {
             isLocked = false;
-            System.out.println("Click! The lock is unlocked now, you can open the locker to take cleats!" );
+            System.out.println("Click! The locker is unlocked now, you can open the locker to take cleats!" );
         }
         else {
             System.out.println("Wrong code! The lock is still closed");
@@ -56,7 +56,7 @@ public class Locker {
     public void openLocker() {
         if (!isLocked && !open) {
             open = true;
-            System.out.println("You open the locker door.");
+            System.out.println("You have opened the locker now, you can take cleats!!");
         } else if (isLocked) {
             System.out.println("The locker is locked. You need to unlock it first.");
         }
@@ -69,7 +69,7 @@ public class Locker {
     public void takeCleats() {
         if (open && hasCleats) {
             hasCleats = false;
-            System.out.println("You can take the cleats from the locker!");
+            System.out.println("You have the cleats now, head back to the field!");
         }
         else if (!open) {
             System.out.println("You need to open the locker first.");

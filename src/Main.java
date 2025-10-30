@@ -52,7 +52,7 @@ public class Main {
                 }
             } else if (command.equals("talk to coach")) {
                 player.talkCoach();
-            } else if (command.equals("unlocker locker")) {
+            } else if (command.equals("unlock locker")) {
                 locker.unlock();
             } else if (command.equals("open locker")) {
                 locker.openLocker();
@@ -77,7 +77,7 @@ public class Main {
 
 //        Ending message
         if (winGame) {
-            System.out.println("========================================");
+            System.out.println("\n========================================");
             System.out.println("CONGRATULATIONS! You helped Cristiano score a goal!");
             System.out.println("Thanks for playing!!");
             System.out.println("========================================");
