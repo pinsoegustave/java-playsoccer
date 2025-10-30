@@ -42,7 +42,7 @@ public class Bench {
     public void takeID() {
         if (isLifted && !isIDTaken) {
             isIDTaken = true;
-            System.out.println("You can take the ID, go talk to the coach!");
+            System.out.println("You've got the ID now, go talk to the coach!");
         } else if (!isLifted) {
             System.out.println("You need to lift the towel first!");
         }

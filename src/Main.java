@@ -24,7 +24,7 @@ public class Main {
 //        Main game loop
         while (gameRunning && !winGame) {
 //            Prompt the user to enter command
-            System.out.println("\nPlease enter command ");
+            System.out.println("\nPlease enter a command here: ");
             command = input.nextLine();
 
             if (command.equals("quit")) {
