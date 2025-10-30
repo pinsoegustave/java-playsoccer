@@ -63,7 +63,7 @@ public class Main {
                 }
             } else if (command.equals("inflate ball")) {
                 ball.inflate();
-            } else if (command.equals("kick balll")) {
+            } else if (command.equals("kick ball")) {
                 ball.kick();
                 if (ball.isKicked()) {
                     winGame = true;
