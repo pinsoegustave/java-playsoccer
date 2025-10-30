@@ -36,7 +36,30 @@ public class Player {
         }
     }
 
+//    Getters and setters methods
+    public boolean hasID() {
+        return hasID;
+    }
 
+    public void setHasID(boolean hasID) {
+        this.hasID = hasID;
+    }
+
+    public boolean hasCleats() {
+        return hasCleats;
+    }
+
+    public void setHasCleats(boolean hasCleats) {
+        this.hasCleats = hasCleats;
+    }
+
+    public boolean hasTalkedCoach() {
+        return hasTalkedToCoach;
+    }
+
+    public boolean hasCode() {
+        return hasCode;
+    }
 
 
 }
