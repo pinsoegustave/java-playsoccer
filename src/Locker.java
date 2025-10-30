@@ -3,11 +3,13 @@ public class Locker {
     private boolean open;
     private boolean hasCleats;
     private boolean isLocked;
+    private CombinationLock lock;
 
     public Locker() {
         open = false;
         hasCleats = false;
         isLocked = true;
+        lock = new CombinationLock("10-10-25", "(format: ##-##-##)");
     }
 
 //    this will show the player inside the locker room
@@ -32,8 +34,22 @@ public class Locker {
         }
     }
 
-    public String unlock() {
-        return "interact with combinational lock";
+    public void unlock() {
+        if (!isLocked) {
+            System.out.println("The locker is already unlocked");
+            return;
+        }
+
+        System.out.println("You try to unlock the locker...");
+        boolean unlocked = lock.unlock();
+
+        if (unlocked) {
+            isLocked = false;
+            System.out.println("Click! The lock is unlocked now, you can open the locker to take cleats!" );
+        }
+        else {
+            System.out.println("Wrong code! The lock is still closed");
+        }
     }
 
 //    this will help the player to open the locker to see cleats

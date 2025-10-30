@@ -53,7 +53,7 @@ public class Main {
             } else if (command.equals("talk to coach")) {
                 player.talkCoach();
             } else if (command.equals("unlocker locker")) {
-                System.out.println("***************************");
+                locker.unlock();
             } else if (command.equals("open locker")) {
                 locker.openLocker();
             } else if (command.equals("take cleats")) {
