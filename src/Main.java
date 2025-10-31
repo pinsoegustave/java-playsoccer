@@ -51,8 +51,10 @@ public class Main {
                 }
             } else if (command.equals("talk to coach")) {
                 player.talkCoach();
+//                Set the locker combination after talking to coach
+                locker.setCombination(player.getLockerCode());
             } else if (command.equals("unlock locker")) {
-                locker.unlock();
+                locker.unlock(player);
             } else if (command.equals("open locker")) {
                 locker.openLocker();
             } else if (command.equals("take cleats")) {

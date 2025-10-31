@@ -1,15 +1,19 @@
+import java.util.Random;
+
 public class Player {
 
     private boolean hasID;
     private boolean hasCleats;
     private boolean hasTalkedToCoach ;
     private boolean hasCode;
+    private String lockerCode;
 
     public Player () {
         hasID = false;
         hasCleats = false;
         hasTalkedToCoach = false;
         hasCode = false;
+        lockerCode = "";
     }
 
     public void look() {
@@ -22,9 +26,18 @@ public class Player {
         if (hasID && !hasTalkedToCoach) {
             hasTalkedToCoach = true;
             hasCode = true;
+
+//            Generate random combination lockerCode
+            Random r = new Random();
+            int num1 = r.nextInt(10, 20);
+            int num2 = r.nextInt(20,30);
+            int num3 = r.nextInt(30,40);
+
+            lockerCode = num1+"-"+ num2+"-"+num3;
+
             System.out.println("Coach: I see you have your ID. Welcome to the team!");
-            System.out.println("Coach: You have to get cleats, wait for me to give you the code.");
-            System.out.println("Coach: Good luck out there!");
+            System.out.println("Coach: You have to get cleats, use this code "+ lockerCode+" to unlock the locker, and take one.");
+            System.out.println("Coach: Otherwise, Good luck out there!");
         } else if (!hasID) {
             System.out.println("Coach: Sorry, you have to get an ID to play here.");
         }
@@ -58,5 +71,8 @@ public class Player {
         return hasCode;
     }
 
+    public String getLockerCode() {
+        return lockerCode;
+    }
 
 }

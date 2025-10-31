@@ -9,7 +9,7 @@ public class Locker {
         open = false;
         hasCleats = true;
         isLocked = true;
-        lock = new CombinationLock("10-10-25", "(format: ##-##-##)");
+        lock = new CombinationLock("", "(format: ##-##-##)");
     }
 
 //    this will show the player inside the locker room
@@ -34,7 +34,8 @@ public class Locker {
         }
     }
 
-    public void unlock() {
+//    this method will unlock the locker once the player inputs the correct code.
+    public void unlock(Player player) {
         if (!isLocked) {
             System.out.println("The locker is already unlocked");
             return;
@@ -50,6 +51,12 @@ public class Locker {
         else {
             System.out.println("Wrong code! The lock is still closed");
         }
+    }
+
+//    this method will help to set the locker combination
+    public void setCombination(String code) {
+//        this will recreate the lock with the new generated code
+        lock = new CombinationLock(code, "(format: ##-##-##)");
     }
 
 //    this will help the player to open the locker to see cleats
@@ -69,7 +76,7 @@ public class Locker {
     public void takeCleats() {
         if (open && hasCleats) {
             hasCleats = false;
-            System.out.println("You have the cleats now, head back to the field!");
+            System.out.println("You have the cleats now, good enough to use the ball!");
         }
         else if (!open) {
             System.out.println("You need to open the locker first.");

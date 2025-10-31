@@ -28,11 +28,11 @@ public class Ball {
 //    method to help the player inflate the ball,
     public void inflate(Player player) {
         if (!player.hasCleats()) {
-            System.out.println("You can't inflate the ball without cleats. Go find them");
+            System.out.println("You can't inflate the ball without cleats. Go find them first");
         }
         else if (!isInflated) {
             isInflated = true;
-            System.out.println("You inflated the ball. Now you can kick it.");
+            System.out.println("You have inflated the ball. Now you can kick it.");
         }
         else {
             System.out.println("The ball is already inflated.");
