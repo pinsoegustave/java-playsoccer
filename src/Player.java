@@ -45,7 +45,7 @@ public class Player {
             System.out.println("Coach: Sorry, you have to get an ID to play here.");
         }
         else {
-            System.out.println("Coach: Go get your cleats, the combination code is 10-10-25");
+            System.out.println("Coach: Go get your cleats, the combination code is "+lockerCode);
         }
     }
 
