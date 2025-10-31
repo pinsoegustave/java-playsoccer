@@ -15,7 +15,7 @@ public class Main {
         Ball ball = new Ball();
 
 //        Print the welcome message
-        System.out.println("=== Welcome to Cristiano's Soccer Play ===");
+        System.out.println("===== Welcome to Cristiano's Soccer Play =====");
         System.out.println("Cristiano is new to Pittsburgh and wants to play soccer at Rooney Field.");
         System.out.println("Help him follow the rules to join the game and score a goal!");
         System.out.println("==============================================");
@@ -31,7 +31,7 @@ public class Main {
 
             if (command.equals("quit")) {
                 gameRunning = false;
-                System.out.println("*****");
+                System.out.println("Am sorry to see you go(~_~)! \nLooking forward to seeing you come back!");
             } else if (command.equals("look")) {
                 player.look();
                 bench.look();
