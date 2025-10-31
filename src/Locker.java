@@ -26,7 +26,7 @@ public class Locker {
         if (isLocked) {
             System.out.println("A metal locker secured with a combinational lock. It appears to be locked.");
         } else if (open) {
-            if (!hasCleats) {
+            if (hasCleats) {
                 System.out.println("The locker is open! Inside you see a pair of soccer cleats.");
             }
             else {
