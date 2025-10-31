@@ -40,7 +40,7 @@ public class Locker {
             return;
         }
 
-        System.out.println("You try to unlock the locker...");
+        System.out.println("You are trying to unlock the locker...");
         boolean unlocked = lock.unlock();
 
         if (unlocked) {

@@ -12,10 +12,9 @@ public class Main {
         Ball ball = new Ball();
 
 //        Print the welcome message
-        System.out.println("=== Welcome to Cristiano's Soccer Adventure ===");
+        System.out.println("=== Welcome to Cristiano's Soccer Play ===");
         System.out.println("Cristiano is new to Pittsburgh and wants to play soccer at Rooney Field.");
         System.out.println("Help him follow the rules to join the game and score a goal!");
-//        System.out.println("\nType 'help' for available commands.");
         System.out.println("==============================================");
 
         boolean gameRunning = true;
