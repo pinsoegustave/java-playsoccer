@@ -1,3 +1,5 @@
+// Player Class: this class helps to player look around the field, and talk to coach
+
 import java.util.Random;
 
 public class Player {
@@ -16,6 +18,7 @@ public class Player {
         lockerCode = "";
     }
 
+//    this will show the player around the field
     public void look() {
         System.out.println("You are standing on Rooney Field. You see: ");
         System.out.println("- A coach standing alongside the field");

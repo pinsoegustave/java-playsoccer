@@ -1,3 +1,6 @@
+// This is the Main Driver class that joins together all the classes and
+// controls the flow of the game.
+
 import java.util.Scanner;
 
 public class Main {

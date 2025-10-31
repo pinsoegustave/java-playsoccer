@@ -1,3 +1,7 @@
+// Locker class: This class will help to interact with the locker, as it keeps the cleats
+// and locked, the player will unlock it with the generated code given by the coach to
+// be able to take cleats
+
 public class Locker {
 //    Instance variables
     private boolean open;
@@ -35,6 +39,7 @@ public class Locker {
     }
 
 //    this method will unlock the locker once the player inputs the correct code.
+//    It takes the parameter for the player to have the generated code from the coach.
     public void unlock(Player player) {
         if (!isLocked) {
             System.out.println("The locker is already unlocked");

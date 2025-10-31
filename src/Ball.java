@@ -1,3 +1,6 @@
+// Ball class: this class will help to interact with the ball, inflate it,
+// and kick it to win the game!
+
 public class Ball {
 //    Instance variables
     private boolean isInflated;

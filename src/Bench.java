@@ -1,3 +1,6 @@
+// Bench class: This class will help interact with the bench and towel
+// to help the player get the ID
+
 public class Bench {
 
 //    Instance variables
@@ -27,7 +30,7 @@ public class Bench {
         }
 
     }
-
+//    method to help the player lift the towel to take the ID
     public void liftTowel() {
         if (!isLifted) {
             isLifted = true;
