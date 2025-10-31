@@ -13,54 +13,89 @@ Cristiano is new to Pittsburgh, and he wants to play soccer sometime. He walks n
 
 
 ### Pathway to winning:
-1. Lift the towel: You will first need an ID to play, and the ID is hidden inside the towel. You just lift the towel and take your ID.
-2. Talk to the coach: You must have an ID to talk to the coach.
-3. Give code: The coach will give you the code to unlock the locker to take cleats from. 
-4. Unlock locker: You will have to unlock the locker room to take cleats.
-5. Inflate the ball: There is a ball on the field, and you have to inflate it before kicking it. You have to kick it and then score a goal (Cristiano scores, the game ends).
+1. Lift the towel: You will first need an ID to play, and the ID is hidden inside the towel. You just lift the towel.
+2. Take ID: You will take the ID after lifting the towel.
+3. Talk to coach: You must have an ID to talk to the coach.
+4. Generate code: The coach will generate the random code to unlock the locker and take the cleats. 
+5. Unlock locker: You will have to unlock the locker room with the code given by the coach to take your cleats.
+6. Inflate the ball: There is a ball on the field, and you have to inflate it before kicking it. You have to kick it after to score a goal (Cristiano scores, the game ends).
+7. Kick the ball: You will kick the ball at the end, then score a goal, and the game ends!!
 
 
 
 ## Classes
 ### Bench Class
-Attributes: 
+Attributes:
+- isIDTaken: boolean to return true when the player takes the ID.
+- isLifted: boolean to return true when the player lifts the towel.
+
 Methods:
-- getID(): To pick the ID from the towel.
+- look(): method to show the bench and towel.
+- examine(): this method provides details about the bench and the towel. 
+- liftTowel(): this method will help the player lift the towel.
+- takeID(): This method will help the player take the ID from the towel.
+
 
 ### Player Class
 Attributes:
-- Boolean hasID: This will return TRUE, if the player hasID.
-- Boolean hasCleats: This will return TRUE, if the player has get the cleats.
-- Boolean hasTalkedToCoach: This will return TRUE, if the player has talked to the coach.
+- Boolean hasID: This will return TRUE if the player has taken the ID.
+- Boolean hasCleats: This will return TRUE if the player has taken the cleats.
+- Boolean hasTalkedToCoach: This will return TRUE if the player has talked to the coach.
+- Boolean hasCode: This will return TRUE if the player has obtained the code.
+- String lockerCode: This variable holds the generated code for the coach
+
 Methods:
 - look(): This will be called when the player is looking around the field. It will say that the player is seeing the coach, the bench, and the locker.
-- liftTowel(): This method will run for the player to lift the towel to get the ID.
-- takeID(): This method will help the player to take the ID from the towel.
 - talkCoach(): This method will make the player talk to coach and get more rules.
-- getCode(): This method will help the player receive the code from the coach
-- openLocker(): This method will help the player open the locker.
-- takeCleats(): This method will help the player take cleats from the locker.
+
 
 ### Ball Class
 Attributes:
-- Boolean isInflated: This will return TRUE, if the player inflated the ball.
-- Boolean isKicked: This will return TRUE, when the player kicks the play and decides that the player has won the game.
+- Boolean isInflated: This will return TRUE if the player inflated the ball.
+- Boolean isKicked: This will return TRUE when the player kicks the ball, and this decides that the player has won the game.
+
 Methods:
-- inflate(): This method will run to make the player inflate the ball.
-- kick(): This method will run to make player kick the ball.
+- look(): This method shows the player around the field.
+- examine(): This method provides details on how to use the ball.
+- inflate(): This method helps the player inflate the ball.
+- kick(): This method helps the player kick the ball.
+
 
 ### Locker Class
 Attributes: 
 - Boolean open: This will return true if the locker has been opened.
 - Boolean hasCleats: This will return true if the player has picked the cleats.
 - Boolean isLocked: This will return true if the player has not opened the locker. 
+- (Given)Combinational lock: This will interact with the code to unlock the locker.
+
 Methods:
-- look(): This will help to show everything around in the room.
-- examine(): This will help to get the information to open the locker room and locker space.
-- unlock(): This will interact with the CombinationationLock and unlock the locker if the code is correct.
+- look(): This will help to show everything in the locker room.
+- examine(): This will help to get the information to open the locker room.
+- unlock(Player player): This will interact with the CombinationLock and unlock the locker if the code is correct.
+- openLocker(): This method will help the player open the locker.
+- takeCleats(): This method will help the player take cleats from the locker.
+
 
 ### Common game commands:
-- Start command: “start game” will welcome you and start the game.
-- Look command: This will help you see the objects around you everywhere.
-- Examine command: This will help you know the details about the object you want to use.
-Quit command: Entering “quit” will end the game.
+look command: This will help you see the objects around you everywhere.
+
+examine (object): This will help you know the details about the object you want to use.
+
+lift towel
+
+take id
+
+talk to coach
+
+unlock locker
+
+open locker
+
+take cleats
+
+inflate ball
+
+kick ball: The players wins here by kicking the ball and score a goal.
+
+Quit: Entering “quit” will end the game.
+
