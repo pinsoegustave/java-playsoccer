@@ -57,7 +57,7 @@ public class Main {
 //                Set the locker combination after talking to coach
                 locker.setCombination(player.getLockerCode());
             } else if (command.equals("unlock locker")) {
-                locker.unlock(player);
+                locker.unlock();
             } else if (command.equals("open locker")) {
                 locker.openLocker();
             } else if (command.equals("take cleats")) {

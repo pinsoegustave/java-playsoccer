@@ -8,11 +8,13 @@ public class Locker {
     private boolean hasCleats;
     private boolean isLocked;
     private CombinationLock lock;
+    public boolean hasCombination;
 
     public Locker() {
         open = false;
         hasCleats = true;
         isLocked = true;
+        hasCombination = false;
         lock = new CombinationLock("", "(format: ##-##-##)");
     }
 
@@ -40,9 +42,14 @@ public class Locker {
 
 //    this method will unlock the locker once the player inputs the correct code.
 //    It takes the parameter for the player to have the generated code from the coach.
-    public void unlock(Player player) {
+    public void unlock() {
         if (!isLocked) {
             System.out.println("The locker is already unlocked");
+            return;
+        }
+
+        if (!hasCombination) {
+            System.out.println("You don't have the combination code yet. Talk to the coach first!");
             return;
         }
 
@@ -62,6 +69,7 @@ public class Locker {
     public void setCombination(String code) {
 //        this will recreate the lock with the new generated code
         lock = new CombinationLock(code, "(format: ##-##-##)");
+        hasCombination = true;
     }
 
 //    this will help the player to open the locker to see cleats
